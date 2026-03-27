@@ -1,504 +1,11 @@
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(this)">
-                        What platforms do you manage?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We specialize in META (Facebook/Instagram), Google Ads, LinkedIn, TikTok, and Pinterest. The specific platforms we manage depend on your tier and which are most effective for your business.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(this)">
-                        Do you work with specific industries?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We work with B2B, B2C, e-commerce, SaaS, professional services, and more. Our strategies are tailored to each business's unique needs and target audience.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(this)">
-                        What's your cancellation policy?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We require 30 days notice for cancellation. For Growth Catalyst and above, we provide a detailed transition plan to ensure your campaigns continue performing during the handoff.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Ready to Accelerate Your Growth?</h2>
-                <p class="cta-subtitle">Book your free strategy session today and discover which service tier is right for your business.</p>
-                <a href="contact.html" class="btn btn-primary btn-large" onclick="trackFunnelStep('decision', 'services_final_cta', 'Book Strategy Session')">
-                    <i class="fas fa-calendar-check"></i> Book Free Strategy Session
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <a href="index.html" class="footer-logo">
-                        <span class="logo-icon">🌲</span>
-                        <span class="logo-text">Redwood Growth Accelerator</span>
-                    </a>
-                    <p class="footer-description">Accelerating digital marketing growth through data-driven strategies and automated systems.</p>
-                </div>
-                
-                <div class="footer-col">
-                    <h3 class="footer-heading">Services</h3>
-                    <a href="#starter" class="footer-link">Sapling Starter</a>
-                    <a href="#catalyst" class="footer-link">Growth Catalyst</a>
-                    <a href="#elite" class="footer-link">Accelerator Elite</a>
-                    <a href="#enterprise" class="footer-link">Enterprise Grove</a>
-                </div>
-                
-                <div class="footer-col">
-                    <h3 class="footer-heading">Resources</h3>
-                    <a href="resources.html" class="footer-link">Free Templates</a>
-                    <a href="resources.html" class="footer-link">Case Studies</a>
-                    <a href="resources.html" class="footer-link">Blog</a>
-                    <a href="resources.html" class="footer-link">Tools</a>
-                </div>
-                
-                <div class="footer-col">
-                    <h3 class="footer-heading">Contact</h3>
-                    <a href="contact.html" class="footer-link">Get in Touch</a>
-                    <a href="contact.html" class="footer-link">Book a Call</a>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p class="copyright">&copy; 2026 Redwood Growth Accelerator. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#" class="footer-bottom-link">Privacy Policy</a>
-                    <a href="#" class="footer-bottom-link">Terms of Service</a>
-                    <a href="#" class="footer-bottom-link">Cookie Policy</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Tracking Script -->
-    <script src="js/tracking.js"></script>
-    <script src="js/main.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Redwood Growth Accelerator</title>
+    <meta name="description" content="Choose from our 4-tier service packages: Sapling Starter, Growth Catalyst, Accelerator Elite, and Enterprise Grove. Each designed to accelerate your digital marketing growth.">
     
-    <!-- Services Page Specific Scripts -->
-    <script>
-    // Add Services Page Styles
-    document.addEventListener('DOMContentLoaded', function() {
-        // Track page view
-        trackFunnelStep('consideration', 'page_view', 'services');
-        
-        // Add styles
-        const style = document.createElement('style');
-        style.textContent = `
-            /* Services Hero */
-            .services-hero {
-                padding: 8rem 0 4rem;
-                background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-main) 100%);
-                color: var(--white);
-                text-align: center;
-            }
-            
-            .services-hero .hero-title,
-            .services-hero .hero-subtitle {
-                color: var(--white);
-            }
-            
-            /* Service Tiers */
-            .service-tiers {
-                padding: var(--space-3xl) 0;
-                background-color: var(--gray-50);
-            }
-            
-            .tiers-grid {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: var(--space-lg);
-                margin-top: var(--space-2xl);
-            }
-            
-            .tier-card {
-                background-color: var(--white);
-                border-radius: var(--radius-lg);
-                padding: var(--space-xl);
-                box-shadow: var(--shadow-md);
-                transition: all var(--transition-normal);
-                position: relative;
-                border: 2px solid transparent;
-            }
-            
-            .tier-card:hover {
-                transform: translateY(-8px);
-                box-shadow: var(--shadow-xl);
-                border-color: var(--primary-main);
-            }
-            
-            .tier-card.featured {
-                border-color: var(--primary-main);
-                transform: scale(1.05);
-            }
-            
-            .tier-card.featured:hover {
-                transform: scale(1.05) translateY(-8px);
-            }
-            
-            .tier-badge {
-                position: absolute;
-                top: -12px;
-                left: 50%;
-                transform: translateX(-50%);
-                background-color: var(--primary-main);
-                color: var(--white);
-                padding: var(--space-xs) var(--space-md);
-                border-radius: var(--radius-full);
-                font-size: 0.75rem;
-                font-weight: 600;
-                white-space: nowrap;
-            }
-            
-            .tier-header {
-                text-align: center;
-                margin-bottom: var(--space-lg);
-            }
-            
-            .tier-icon {
-                font-size: 3rem;
-                color: var(--primary-main);
-                margin-bottom: var(--space-md);
-            }
-            
-            .tier-name {
-                margin-bottom: var(--space-sm);
-                color: var(--gray-900);
-            }
-            
-            .tier-price {
-                margin-bottom: var(--space-md);
-            }
-            
-            .price-amount {
-                font-size: 2rem;
-                font-weight: 700;
-                color: var(--gray-900);
-                display: block;
-            }
-            
-            .price-period {
-                color: var(--gray-600);
-                font-size: 0.875rem;
-            }
-            
-            .tier-description {
-                color: var(--gray-700);
-                margin-bottom: var(--space-lg);
-                font-size: 0.875rem;
-                text-align: center;
-            }
-            
-            .tier-features {
-                list-style: none;
-                padding: 0;
-                margin: 0 0 var(--space-xl) 0;
-            }
-            
-            .tier-features li {
-                display: flex;
-                align-items: center;
-                gap: var(--space-sm);
-                margin-bottom: var(--space-sm);
-                color: var(--gray-700);
-                font-size: 0.875rem;
-            }
-            
-            .tier-features li i {
-                color: var(--primary-main);
-            }
-            
-            .tier-cta {
-                text-align: center;
-            }
-            
-            /* Comparison Table */
-            .comparison-section {
-                padding: var(--space-3xl) 0;
-            }
-            
-            .comparison-table {
-                overflow-x: auto;
-                margin-top: var(--space-2xl);
-            }
-            
-            .comparison-table table {
-                width: 100%;
-                border-collapse: collapse;
-                background-color: var(--white);
-                border-radius: var(--radius-lg);
-                overflow: hidden;
-                box-shadow: var(--shadow-md);
-            }
-            
-            .comparison-table th,
-            .comparison-table td {
-                padding: var(--space-md);
-                text-align: center;
-                border-bottom: 1px solid var(--gray-200);
-            }
-            
-            .comparison-table th {
-                background-color: var(--primary-main);
-                color: var(--white);
-                font-weight: 600;
-            }
-            
-            .comparison-table th:first-child {
-                text-align: left;
-                background-color: var(--primary-dark);
-            }
-            
-            .comparison-table td:first-child {
-                text-align: left;
-                font-weight: 600;
-                background-color: var(--gray-50);
-            }
-            
-            .comparison-table tr:last-child td {
-                border-bottom: none;
-            }
-            
-            .comparison-table i.fa-check {
-                color: var(--success);
-            }
-            
-            .comparison-table i.fa-times {
-                color: var(--error);
-            }
-            
-            /* Timeline */
-            .timeline-section {
-                padding: var(--space-3xl) 0;
-                background-color: var(--gray-50);
-            }
-            
-            .timeline {
-                max-width: 800px;
-                margin: var(--space-3xl) auto 0;
-                position: relative;
-            }
-            
-            .timeline::before {
-                content: '';
-                position: absolute;
-                left: 50%;
-                top: 0;
-                bottom: 0;
-                width: 2px;
-                background-color: var(--primary-main);
-                transform: translateX(-50%);
-            }
-            
-            .timeline-item {
-                margin-bottom: var(--space-2xl);
-                position: relative;
-            }
-            
-            .timeline-phase {
-                display: flex;
-                align-items: center;
-                gap: var(--space-xl);
-                position: relative;
-            }
-            
-            .timeline-item:nth-child(odd) .timeline-phase {
-                flex-direction: row-reverse;
-            }
-            
-            .phase-number {
-                width: 60px;
-                height: 60px;
-                background-color: var(--primary-main);
-                color: var(--white);
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-weight: 700;
-                font-size: 1.5rem;
-                flex-shrink: 0;
-                z-index: 1;
-            }
-            
-            .phase-content {
-                flex: 1;
-                background-color: var(--white);
-                border-radius: var(--radius-lg);
-                padding: var(--space-xl);
-                box-shadow: var(--shadow-md);
-            }
-            
-            .phase-content h3 {
-                margin-bottom: var(--space-sm);
-                color: var(--gray-900);
-            }
-            
-            .phase-content p {
-                color: var(--gray-700);
-                margin: 0;
-            }
-            
-            /* FAQ */
-            .faq-section {
-                padding: var(--space-3xl) 0;
-            }
-            
-            .faq-grid {
-                max-width: 800px;
-                margin: var(--space-2xl) auto 0;
-            }
-            
-            .faq-item {
-                margin-bottom: var(--space-md);
-                border: 1px solid var(--gray-200);
-                border-radius: var(--radius-md);
-                overflow: hidden;
-            }
-            
-            .faq-question {
-                width: 100%;
-                padding: var(--space-lg);
-                background-color: var(--white);
-                border: none;
-                text-align: left;
-                font-size: 1rem;
-                font-weight: 600;
-                color: var(--gray-900);
-                cursor: pointer;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                transition: background-color var(--transition-fast);
-            }
-            
-            .faq-question:hover {
-                background-color: var(--gray-50);
-            }
-            
-            .faq-question i {
-                transition: transform var(--transition-fast);
-            }
-            
-            .faq-question.active i {
-                transform: rotate(180deg);
-            }
-            
-            .faq-answer {
-                padding: 0 var(--space-lg);
-                max-height: 0;
-                overflow: hidden;
-                transition: all var(--transition-normal);
-            }
-            
-            .faq-answer.active {
-                padding: var(--space-lg);
-                max-height: 500px;
-            }
-            
-            .faq-answer p {
-                color: var(--gray-700);
-                margin: 0;
-            }
-            
-            /* Responsive */
-            @media (max-width: 1199px) {
-                .tiers-grid {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            }
-            
-            @media (max-width: 767px) {
-                .tiers-grid {
-                    grid-template-columns: 1fr;
-                }
-                
-                .tier-card.featured {
-                    transform: none;
-                }
-                
-                .tier-card.featured:hover {
-                    transform: translateY(-8px);
-                }
-                
-                .timeline::before {
-                    left: 30px;
-                }
-                
-                .timeline-phase {
-                    flex-direction: row !important;
-                    gap: var(--space-lg);
-                }
-                
-                .phase-number {
-                    width: 50px;
-                    height: 50px;
-                    font-size: 1.25rem;
-                }
-            }
-        `;
-        
-        document.head.appendChild(style);
-        
-        // FAQ toggle functionality
-        function toggleFAQ(button) {
-            const answer = button.nextElementSibling;
-            const isActive = answer.classList.contains('active');
-            
-            // Close all other FAQs
-            document.querySelectorAll('.faq-answer.active').forEach(el => {
-                if (el !== answer) {
-                    el.classList.remove('active');
-                    el.previousElementSibling.classList.remove('active');
-                }
-            });
-            
-            // Toggle current FAQ
-            button.classList.toggle('active');
-            answer.classList.toggle('active');
-            
-            // Track FAQ interaction
-            if (!isActive) {
-                const question = button.textContent.trim();
-                trackFunnelStep('consideration', 'faq_open', question);
-            }
-        }
-        
-        // Initialize FAQ buttons
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', function() {
-                toggleFAQ(this);
-            });
-        });
-    });
-    </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -506,7 +13,7 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-RGACCELERATOR');</script>
     <!-- End Google Tag Manager -->
-
+    
     <!-- Facebook Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -524,6 +31,340 @@
     src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-RGACCELERATOR"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🌲</span>
+                <span class="logo-text">Redwood Growth Accelerator</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="resources.html" class="nav-link">Resources</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="contact.html" class="btn btn-primary nav-cta">Get Started</a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
 
-</body>
-</html>
+    <!-- Services Hero -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Choose Your Growth Path</h1>
+                <p class="hero-subtitle">From foundational audits to enterprise-scale acceleration, we have a service tier designed for every stage of your growth journey.</p>
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn btn-primary btn-large" onclick="trackFunnelStep('consideration', 'services_hero_cta', 'Get Started')">
+                        <i class="fas fa-calendar-check"></i> Book Free Strategy Session
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Tiers -->
+    <section class="service-tiers">
+        <div class="container">
+            <h2 class="section-title">Our Service Tiers</h2>
+            <p class="section-subtitle">Select the perfect package for your business needs and growth goals</p>
+            
+            <div class="tiers-grid">
+                <!-- Sapling Starter -->
+                <div class="tier-card" id="starter">
+                    <div class="tier-header">
+                        <div class="tier-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3 class="tier-name">Sapling Starter</h3>
+                        <div class="tier-price">
+                            <span class="price-amount">FREE</span>
+                            <span class="price-period">Marketing Audit</span>
+                        </div>
+                    </div>
+                    <div class="tier-description">
+                        Perfect for businesses just starting their digital marketing journey or wanting a comprehensive audit.
+                    </div>
+                    <ul class="tier-features">
+                        <li><i class="fas fa-check"></i> Comprehensive Marketing Audit</li>
+                        <li><i class="fas fa-check"></i> Basic Tracking Setup (GA4)</li>
+                        <li><i class="fas fa-check"></i> 5 Free Marketing Templates</li>
+                        <li><i class="fas fa-check"></i> 30-Minute Strategy Call</li>
+                        <li><i class="fas fa-check"></i> Growth Opportunity Report</li>
+                    </ul>
+                    <div class="tier-cta">
+                        <a href="contact.html" class="btn btn-outline" onclick="trackFunnelStep('consideration', 'tier_select', 'sapling_starter')">
+                            Get Free Audit
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Growth Catalyst -->
+                <div class="tier-card featured" id="catalyst">
+                    <div class="tier-badge">Most Popular</div>
+                    <div class="tier-header">
+                        <div class="tier-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="tier-name">Growth Catalyst</h3>
+                        <div class="tier-price">
+                            <span class="price-amount">$1,500-3,000</span>
+                            <span class="price-period">per month</span>
+                        </div>
+                    </div>
+                    <div class="tier-description">
+                        For businesses ready to accelerate growth with comprehensive tracking and multi-platform campaigns.
+                    </div>
+                    <ul class="tier-features">
+                        <li><i class="fas fa-check"></i> Everything in Sapling Starter</li>
+                        <li><i class="fas fa-check"></i> Complete Tracking Setup (GA4 + GTM)</li>
+                        <li><i class="fas fa-check"></i> 2 Platform Management (META + Google)</li>
+                        <li><i class="fas fa-check"></i> Weekly Performance Reviews</li>
+                        <li><i class="fas fa-check"></i> Monthly Strategy Optimization</li>
+                        <li><i class="fas fa-check"></i> Basic Creative Production</li>
+                        <li><i class="fas fa-check"></i> Email Marketing Setup</li>
+                    </ul>
+                    <div class="tier-cta">
+                        <a href="contact.html" class="btn btn-primary" onclick="trackFunnelStep('consideration', 'tier_select', 'growth_catalyst')">
+                            Start Accelerating
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Accelerator Elite -->
+                <div class="tier-card" id="elite">
+                    <div class="tier-header">
+                        <div class="tier-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="tier-name">Accelerator Elite</h3>
+                        <div class="tier-price">
+                            <span class="price-amount">$3,000-7,000</span>
+                            <span class="price-period">per month</span>
+                        </div>
+                    </div>
+                    <div class="tier-description">
+                        Advanced multi-platform strategy with dedicated resources and premium creative production.
+                    </div>
+                    <ul class="tier-features">
+                        <li><i class="fas fa-check"></i> Everything in Growth Catalyst</li>
+                        <li><i class="fas fa-check"></i> 3+ Platform Management</li>
+                        <li><i class="fas fa-check"></i> Advanced Attribution Modeling</li>
+                        <li><i class="fas fa-check"></i> Premium Creative Production</li>
+                        <li><i class="fas fa-check"></i> Bi-Weekly Strategy Sessions</li>
+                        <li><i class="fas fa-check"></i> Custom Integration Development</li>
+                        <li><i class="fas fa-check"></i> A/B Testing & Optimization</li>
+                        <li><i class="fas fa-check"></i> Priority Support</li>
+                    </ul>
+                    <div class="tier-cta">
+                        <a href="contact.html" class="btn btn-outline" onclick="trackFunnelStep('consideration', 'tier_select', 'accelerator_elite')">
+                            Go Elite
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Enterprise Grove -->
+                <div class="tier-card" id="enterprise">
+                    <div class="tier-header">
+                        <div class="tier-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <h3 class="tier-name">Enterprise Grove</h3>
+                        <div class="tier-price">
+                            <span class="price-amount">Custom</span>
+                            <span class="price-period">Enterprise Solutions</span>
+                        </div>
+                    </div>
+                    <div class="tier-description">
+                        Fully customized enterprise solutions with dedicated teams and 24/7 support for maximum scale.
+                    </div>
+                    <ul class="tier-features">
+                        <li><i class="fas fa-check"></i> Everything in Accelerator Elite</li>
+                        <li><i class="fas fa-check"></i> Dedicated Account Team</li>
+                        <li><i class="fas fa-check"></i> Custom Platform Development</li>
+                        <li><i class="fas fa-check"></i> 24/7 Monitoring & Support</li>
+                        <li><i class="fas fa-check"></i> Enterprise Security & Compliance</li>
+                        <li><i class="fas fa-check"></i> Custom Reporting Dashboard</li>
+                        <li><i class="fas fa-check"></i> SLA Guarantee</li>
+                        <li><i class="fas fa-check"></i> Executive Strategy Sessions</li>
+                    </ul>
+                    <div class="tier-cta">
+                        <a href="contact.html" class="btn btn-outline" onclick="trackFunnelStep('consideration', 'tier_select', 'enterprise_grove')">
+                            Contact for Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">Detailed Feature Comparison</h2>
+            <p class="section-subtitle">See exactly what each tier includes</p>
+            
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Sapling Starter</th>
+                            <th>Growth Catalyst</th>
+                            <th>Accelerator Elite</th>
+                            <th>Enterprise Grove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Marketing Audit</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>GA4 Setup</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>GTM Setup</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Platform Management</td>
+                            <td>-</td>
+                            <td>2 Platforms</td>
+                            <td>3+ Platforms</td>
+                            <td>Custom</td>
+                        </tr>
+                        <tr>
+                            <td>Creative Production</td>
+                            <td>-</td>
+                            <td>Basic</td>
+                            <td>Premium</td>
+                            <td>Custom</td>
+                        </tr>
+                        <tr>
+                            <td>Strategy Sessions</td>
+                            <td>30 min</td>
+                            <td>Weekly</td>
+                            <td>Bi-Weekly</td>
+                            <td>Executive</td>
+                        </tr>
+                        <tr>
+                            <td>Support</td>
+                            <td>Email</td>
+                            <td>Business Hours</td>
+                            <td>Priority</td>
+                            <td>24/7</td>
+                        </tr>
+                        <tr>
+                            <td>Reporting</td>
+                            <td>Basic</td>
+                            <td>Weekly</td>
+                            <td>Custom</td>
+                            <td>Enterprise Dashboard</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Timeline -->
+    <section class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">90-Day Implementation Timeline</h2>
+            <p class="section-subtitle">Our proven framework for rapid growth acceleration</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-phase">
+                        <span class="phase-number">1</span>
+                        <div class="phase-content">
+                            <h3>Foundation (Days 1-30)</h3>
+                            <p>Audit, tracking setup, strategy development, and initial campaign launch.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-phase">
+                        <span class="phase-number">2</span>
+                        <div class="phase-content">
+                            <h3>Optimization (Days 31-60)</h3>
+                            <p>Performance analysis, A/B testing, creative optimization, and scaling.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-phase">
+                        <span class="phase-number">3</span>
+                        <div class="phase-content">
+                            <h3>Acceleration (Days 61-90)</h3>
+                            <p>Advanced strategies, multi-platform expansion, and maximum growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        What's included in the free audit?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The Sapling Starter audit includes: comprehensive website analysis, current marketing performance review, competitor analysis, growth opportunity identification, and a 30-minute strategy call to discuss findings and next steps.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        How long does it take to see results?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most clients see initial improvements within 30 days, with significant growth acceleration by day 90. Our 90-day implementation timeline is designed to deliver measurable results quickly while building sustainable growth systems.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        Can I upgrade between tiers?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! You can upgrade at any time. We
