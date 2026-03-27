@@ -1,0 +1,435 @@
+                <div class="footer-col">
+                    <h3 class="footer-heading">Contact</h3>
+                    <a href="contact.html" class="footer-link">Get in Touch</a>
+                    <a href="contact.html" class="footer-link">Book a Call</a>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Redwood Growth Accelerator. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                    <a href="#" class="footer-bottom-link">Terms of Service</a>
+                    <a href="#" class="footer-bottom-link">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tracking Script -->
+    <script src="js/tracking.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Contact Page Specific Scripts -->
+    <script>
+    // Open Calendly Widget
+    function openCalendly() {
+        // Track booking attempt
+        trackFunnelStep('decision', 'calendly_open', 'contact_page');
+        
+        // Open Calendly widget
+        Calendly.initPopupWidget({
+            url: 'https://calendly.com/redwoodgrowth/strategy-session'
+        });
+        
+        return false;
+    }
+    
+    // Calendly event tracking
+    document.addEventListener('calendly.event_scheduled', function(e) {
+        trackFunnelStep('conversion', 'meeting_scheduled', 'calendly');
+        
+        // Track successful conversion
+        fbq('track', 'Schedule');
+        gtag('event', 'conversion', {
+            'send_to': 'AW-XXXXXXXXXX/XXXXXXXXXX',
+            'value': 1.0,
+            'currency': 'USD'
+        });
+    });
+    
+    // Add Contact Page Styles
+    document.addEventListener('DOMContentLoaded', function() {
+        // Track page view
+        trackFunnelStep('decision', 'page_view', 'contact');
+        
+        // Add styles
+        const style = document.createElement('style');
+        style.textContent = `
+            /* Contact Hero */
+            .contact-hero {
+                padding: 8rem 0 4rem;
+                background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-main) 100%);
+                color: var(--white);
+                text-align: center;
+            }
+            
+            .contact-hero .hero-title,
+            .contact-hero .hero-subtitle {
+                color: var(--white);
+            }
+            
+            .contact-hero .hero-cta {
+                display: flex;
+                justify-content: center;
+                gap: var(--space-lg);
+                flex-wrap: wrap;
+            }
+            
+            .contact-hero .btn-secondary {
+                background-color: transparent;
+                color: var(--white);
+                border-color: var(--white);
+            }
+            
+            .contact-hero .btn-secondary:hover {
+                background-color: var(--white);
+                color: var(--primary-main);
+            }
+            
+            /* Contact Options */
+            .contact-options {
+                padding: var(--space-3xl) 0;
+                background-color: var(--gray-50);
+            }
+            
+            .options-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: var(--space-xl);
+                margin-top: var(--space-2xl);
+            }
+            
+            .option-card {
+                background-color: var(--white);
+                border-radius: var(--radius-lg);
+                padding: var(--space-2xl);
+                text-align: center;
+                box-shadow: var(--shadow-md);
+                transition: all var(--transition-normal);
+                border: 2px solid transparent;
+            }
+            
+            .option-card:hover {
+                transform: translateY(-8px);
+                box-shadow: var(--shadow-xl);
+                border-color: var(--primary-main);
+            }
+            
+            .option-icon {
+                font-size: 3rem;
+                color: var(--primary-main);
+                margin-bottom: var(--space-lg);
+            }
+            
+            .option-card h3 {
+                margin-bottom: var(--space-md);
+                color: var(--gray-900);
+            }
+            
+            .option-description {
+                color: var(--gray-700);
+                margin-bottom: var(--space-lg);
+            }
+            
+            .option-benefits {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 var(--space-xl) 0;
+                text-align: left;
+            }
+            
+            .option-benefits li {
+                display: flex;
+                align-items: center;
+                gap: var(--space-sm);
+                margin-bottom: var(--space-sm);
+                color: var(--gray-700);
+                font-size: 0.875rem;
+            }
+            
+            .option-benefits li i {
+                color: var(--primary-main);
+            }
+            
+            /* Contact Form */
+            .contact-form-section {
+                padding: var(--space-3xl) 0;
+            }
+            
+            .form-container {
+                max-width: 800px;
+                margin: 0 auto;
+                background-color: var(--white);
+                border-radius: var(--radius-lg);
+                padding: var(--space-3xl);
+                box-shadow: var(--shadow-lg);
+            }
+            
+            .form-header {
+                text-align: center;
+                margin-bottom: var(--space-2xl);
+            }
+            
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-lg);
+            }
+            
+            .form-row {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-lg);
+            }
+            
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-xs);
+            }
+            
+            .form-group label {
+                font-weight: 600;
+                color: var(--gray-800);
+                font-size: 0.875rem;
+            }
+            
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: var(--space-md);
+                border: 2px solid var(--gray-200);
+                border-radius: var(--radius-md);
+                font-family: var(--font-primary);
+                font-size: 1rem;
+                transition: border-color var(--transition-fast);
+            }
+            
+            .form-group input:focus,
+            .form-group select:focus,
+            .form-group textarea:focus {
+                outline: none;
+                border-color: var(--primary-main);
+            }
+            
+            .checkbox-label {
+                display: flex;
+                align-items: flex-start;
+                gap: var(--space-sm);
+                cursor: pointer;
+            }
+            
+            .checkbox-label input[type="checkbox"] {
+                margin-top: 4px;
+            }
+            
+            .checkbox-label span {
+                font-weight: 400;
+                color: var(--gray-700);
+            }
+            
+            .checkbox-label a {
+                color: var(--primary-main);
+                text-decoration: none;
+            }
+            
+            .checkbox-label a:hover {
+                text-decoration: underline;
+            }
+            
+            /* Contact Info */
+            .contact-info {
+                padding: var(--space-3xl) 0;
+                background-color: var(--gray-50);
+            }
+            
+            .info-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: var(--space-lg);
+            }
+            
+            .info-card {
+                background-color: var(--white);
+                border-radius: var(--radius-lg);
+                padding: var(--space-xl);
+                text-align: center;
+                box-shadow: var(--shadow-sm);
+                transition: all var(--transition-normal);
+            }
+            
+            .info-card:hover {
+                transform: translateY(-5px);
+                box-shadow: var(--shadow-md);
+            }
+            
+            .info-icon {
+                font-size: 2rem;
+                color: var(--primary-main);
+                margin-bottom: var(--space-md);
+            }
+            
+            .info-card h3 {
+                margin-bottom: var(--space-sm);
+                color: var(--gray-900);
+            }
+            
+            .info-card p {
+                color: var(--gray-700);
+                margin: 0;
+                font-size: 0.875rem;
+            }
+            
+            .info-card a {
+                color: var(--primary-main);
+                text-decoration: none;
+            }
+            
+            .info-card a:hover {
+                text-decoration: underline;
+            }
+            
+            /* Next Steps */
+            .next-steps {
+                padding: var(--space-3xl) 0;
+            }
+            
+            .steps-timeline {
+                max-width: 800px;
+                margin: var(--space-3xl) auto 0;
+                position: relative;
+            }
+            
+            .steps-timeline::before {
+                content: '';
+                position: absolute;
+                left: 24px;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background-color: var(--primary-main);
+            }
+            
+            .step {
+                display: flex;
+                gap: var(--space-xl);
+                margin-bottom: var(--space-2xl);
+                position: relative;
+            }
+            
+            .step-number {
+                width: 50px;
+                height: 50px;
+                background-color: var(--primary-main);
+                color: var(--white);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                font-size: 1.25rem;
+                flex-shrink: 0;
+                z-index: 1;
+            }
+            
+            .step-content {
+                flex: 1;
+                padding-top: var(--space-sm);
+            }
+            
+            .step-content h3 {
+                margin-bottom: var(--space-sm);
+                color: var(--gray-900);
+            }
+            
+            .step-content p {
+                color: var(--gray-700);
+                margin: 0;
+            }
+            
+            /* Responsive */
+            @media (max-width: 991px) {
+                .options-grid {
+                    grid-template-columns: 1fr;
+                }
+                
+                .info-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            
+            @media (max-width: 767px) {
+                .form-row {
+                    grid-template-columns: 1fr;
+                }
+                
+                .info-grid {
+                    grid-template-columns: 1fr;
+                }
+                
+                .contact-hero .hero-cta {
+                    flex-direction: column;
+                }
+                
+                .steps-timeline::before {
+                    left: 20px;
+                }
+                
+                .step-number {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 1rem;
+                }
+            }
+        `;
+        
+        document.head.appendChild(style);
+        
+        // Form submission handling
+        const form = document.getElementById('main-contact-form');
+        if (form) {
+            form.addEventListener('submit', async function(event) {
+                event.preventDefault();
+                
+                const submitButton = this.querySelector('button[type="submit"]');
+                const originalText = submitButton.innerHTML;
+                
+                // Show loading state
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                
+                try {
+                    // Simulate form submission (replace with actual API call)
+                    await new Promise(resolve => setTimeout(resolve, 1500));
+                    
+                    // Show success message
+                    showFormMessage(this, 'success', 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.');
+                    
+                    // Track successful submission
+                    trackFunnelStep('conversion', 'contact_form_submit', 'main_contact');
+                    
+                    // Reset form
+                    this.reset();
+                    
+                } catch (error) {
+                    showFormMessage(this, 'error', 'Sorry, there was an error sending your message. Please try again or call us directly.');
+                    
+                    // Track failed submission
+                    trackFunnelStep('decision', 'contact_form_error', 'main_contact');
+                } finally {
+                    // Restore button state
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalText;
+                }
+            });
+        }
+    });
+    </script>
+</body>
+</html>

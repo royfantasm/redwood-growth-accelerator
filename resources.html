@@ -1,0 +1,372 @@
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Subscribe
+                        </button>
+                    </div>
+                    <p class="form-note">No spam. Unsubscribe anytime. Free resources only.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-icon">🌲</span>
+                        <span class="logo-text">Redwood Growth Accelerator</span>
+                    </a>
+                    <p class="footer-description">Accelerating digital marketing growth through data-driven strategies and automated systems.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Services</h3>
+                    <a href="services.html#starter" class="footer-link">Sapling Starter</a>
+                    <a href="services.html#catalyst" class="footer-link">Growth Catalyst</a>
+                    <a href="services.html#elite" class="footer-link">Accelerator Elite</a>
+                    <a href="services.html#enterprise" class="footer-link">Enterprise Grove</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Resources</h3>
+                    <a href="#awareness" class="footer-link">Awareness Tools</a>
+                    <a href="#consideration" class="footer-link">Consideration Tools</a>
+                    <a href="#conversion" class="footer-link">Conversion Tools</a>
+                    <a href="#tools" class="footer-link">All Tools</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Contact</h3>
+                    <a href="contact.html" class="footer-link">Get in Touch</a>
+                    <a href="contact.html" class="footer-link">Book a Call</a>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Redwood Growth Accelerator. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                    <a href="#" class="footer-bottom-link">Terms of Service</a>
+                    <a href="#" class="footer-bottom-link">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tracking Script -->
+    <script src="js/tracking.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Resources Page Specific Scripts -->
+    <script>
+    // Download Resource Function
+    function downloadResource(resourceName, resourceType) {
+        // Track download
+        if (typeof trackResourceDownload === 'function') {
+            trackResourceDownload(resourceName, resourceType);
+        }
+        
+        // Show download confirmation
+        showDownloadConfirmation(resourceName);
+        
+        // Simulate download (in real implementation, this would link to actual file)
+        console.log(`Downloading: ${resourceName} (${resourceType})`);
+        
+        // In production, this would be: window.location.href = `/downloads/${resourceName}.pdf`;
+    }
+    
+    // Open Tool Function
+    function openTool(toolName) {
+        // Track tool usage
+        trackFunnelStep('interest', 'tool_open', toolName);
+        
+        // Show tool modal or redirect
+        alert(`Opening ${toolName} tool...\n\nIn production, this would open an interactive tool.`);
+        
+        // In production, this would be: window.open(`/tools/${toolName}`, '_blank');
+    }
+    
+    // Newsletter Subscription
+    function subscribeNewsletter(event) {
+        event.preventDefault();
+        
+        const email = event.target.querySelector('input[type="email"]').value;
+        
+        // Track subscription
+        trackFunnelStep('interest', 'newsletter_subscribe', 'resources_page');
+        
+        // Show success message
+        alert(`Thank you! You've been subscribed to our newsletter.\n\nEmail: ${email}\n\nYou'll receive your first resource pack shortly.`);
+        
+        // Reset form
+        event.target.reset();
+    }
+    
+    // Add Resources Page Styles
+    document.addEventListener('DOMContentLoaded', function() {
+        // Track page view
+        trackFunnelStep('interest', 'page_view', 'resources');
+        
+        // Add styles
+        const style = document.createElement('style');
+        style.textContent = `
+            /* Resources Hero */
+            .resources-hero {
+                padding: 8rem 0 4rem;
+                background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-main) 100%);
+                color: var(--white);
+                text-align: center;
+            }
+            
+            .resources-hero .hero-title,
+            .resources-hero .hero-subtitle {
+                color: var(--white);
+            }
+            
+            .resources-hero .stat-number {
+                color: var(--white);
+            }
+            
+            .resources-hero .stat-label {
+                color: var(--primary-lighter);
+            }
+            
+            /* Category Grid */
+            .category-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: var(--space-lg);
+                margin-top: var(--space-2xl);
+            }
+            
+            .category-card {
+                background-color: var(--white);
+                border-radius: var(--radius-lg);
+                padding: var(--space-xl);
+                text-align: center;
+                text-decoration: none;
+                color: var(--gray-800);
+                transition: all var(--transition-normal);
+                border: 2px solid transparent;
+            }
+            
+            .category-card:hover {
+                transform: translateY(-5px);
+                border-color: var(--primary-main);
+                box-shadow: var(--shadow-lg);
+            }
+            
+            .category-icon {
+                font-size: 2.5rem;
+                color: var(--primary-main);
+                margin-bottom: var(--space-md);
+            }
+            
+            .category-card h3 {
+                margin-bottom: var(--space-sm);
+                color: var(--gray-900);
+            }
+            
+            .category-card p {
+                font-size: 0.875rem;
+                color: var(--gray-600);
+                margin: 0;
+            }
+            
+            /* Resource Sections */
+            .resource-section {
+                padding: var(--space-3xl) 0;
+            }
+            
+            .resource-section.alt-bg {
+                background-color: var(--gray-50);
+            }
+            
+            .section-header {
+                text-align: center;
+                margin-bottom: var(--space-2xl);
+            }
+            
+            .resource-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: var(--space-xl);
+            }
+            
+            .resource-card {
+                background-color: var(--white);
+                border-radius: var(--radius-lg);
+                padding: var(--space-xl);
+                box-shadow: var(--shadow-md);
+                transition: all var(--transition-normal);
+            }
+            
+            .resource-card:hover {
+                transform: translateY(-8px);
+                box-shadow: var(--shadow-xl);
+            }
+            
+            .resource-icon {
+                font-size: 2rem;
+                color: var(--primary-main);
+                margin-bottom: var(--space-md);
+            }
+            
+            .resource-card h3 {
+                margin-bottom: var(--space-sm);
+                color: var(--gray-900);
+            }
+            
+            .resource-description {
+                color: var(--gray-700);
+                margin-bottom: var(--space-lg);
+                font-size: 0.875rem;
+            }
+            
+            .resource-meta {
+                display: flex;
+                gap: var(--space-md);
+                margin-bottom: var(--space-lg);
+                flex-wrap: wrap;
+            }
+            
+            .meta-item {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                font-size: 0.75rem;
+                color: var(--gray-600);
+            }
+            
+            .meta-item i {
+                font-size: 0.875rem;
+            }
+            
+            /* Tools Section */
+            .tools-section {
+                padding: var(--space-3xl) 0;
+                background-color: var(--white);
+            }
+            
+            .tools-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: var(--space-lg);
+                margin-top: var(--space-2xl);
+            }
+            
+            .tool-card {
+                background-color: var(--gray-50);
+                border-radius: var(--radius-lg);
+                padding: var(--space-xl);
+                text-align: center;
+                transition: all var(--transition-normal);
+            }
+            
+            .tool-card:hover {
+                background-color: var(--primary-lighter);
+                transform: translateY(-5px);
+            }
+            
+            .tool-icon {
+                font-size: 2rem;
+                color: var(--primary-main);
+                margin-bottom: var(--space-md);
+            }
+            
+            .tool-card h3 {
+                margin-bottom: var(--space-sm);
+                color: var(--gray-900);
+            }
+            
+            .tool-card p {
+                color: var(--gray-700);
+                margin-bottom: var(--space-lg);
+                font-size: 0.875rem;
+            }
+            
+            /* Newsletter Section */
+            .newsletter-section {
+                padding: var(--space-3xl) 0;
+                background: linear-gradient(135deg, var(--primary-main) 0%, var(--primary-light) 100%);
+                color: var(--white);
+                text-align: center;
+            }
+            
+            .newsletter-title {
+                color: var(--white);
+                margin-bottom: var(--space-sm);
+            }
+            
+            .newsletter-subtitle {
+                color: var(--primary-lighter);
+                margin-bottom: var(--space-xl);
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .newsletter-form {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            .newsletter-form .form-group {
+                display: flex;
+                gap: var(--space-sm);
+            }
+            
+            .newsletter-form input {
+                flex: 1;
+                padding: var(--space-md) var(--space-lg);
+                border: 2px solid var(--primary-light);
+                border-radius: var(--radius-md);
+                background-color: var(--white);
+                color: var(--gray-900);
+            }
+            
+            .newsletter-form input:focus {
+                outline: none;
+                border-color: var(--white);
+            }
+            
+            .newsletter-form .form-note {
+                color: var(--primary-lighter);
+                font-size: 0.875rem;
+                margin-top: var(--space-sm);
+            }
+            
+            /* Responsive */
+            @media (max-width: 991px) {
+                .category-grid,
+                .resource-grid,
+                .tools-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            
+            @media (max-width: 767px) {
+                .category-grid,
+                .resource-grid,
+                .tools-grid {
+                    grid-template-columns: 1fr;
+                }
+                
+                .newsletter-form .form-group {
+                    flex-direction: column;
+                }
+            }
+        `;
+        
+        document.head.appendChild(style);
+    });
+    </script>
+</body>
+</html>
