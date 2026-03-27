@@ -1,435 +1,357 @@
-                <div class="footer-col">
-                    <h3 class="footer-heading">Contact</h3>
-                    <a href="contact.html" class="footer-link">Get in Touch</a>
-                    <a href="contact.html" class="footer-link">Book a Call</a>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                    </div>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Redwood Growth Accelerator</title>
+    <meta name="description" content="Get in touch with Redwood Growth Accelerator. Book a free strategy session or send us a message to start accelerating your digital marketing growth.">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXX');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'XXXXXXXXXXXXXXX');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    
+    <!-- Calendly Integration -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🌲</span>
+                <span class="logo-text">Redwood Growth Accelerator</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="resources.html" class="nav-link">Resources</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+                <a href="#book-call" class="btn btn-primary nav-cta">Book a Call</a>
             </div>
-            
-            <div class="footer-bottom">
-                <p class="copyright">&copy; 2026 Redwood Growth Accelerator. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#" class="footer-bottom-link">Privacy Policy</a>
-                    <a href="#" class="footer-bottom-link">Terms of Service</a>
-                    <a href="#" class="footer-bottom-link">Cookie Policy</a>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Let's Accelerate Your Growth Together</h1>
+                <p class="hero-subtitle">Book a free strategy session or send us a message to discuss how we can help scale your digital marketing.</p>
+                <div class="hero-cta">
+                    <a href="#book-call" class="btn btn-primary btn-large" onclick="trackFunnelStep('decision', 'hero_book_call', 'contact_page')">
+                        <i class="fas fa-calendar-check"></i> Book Free Strategy Session
+                    </a>
+                    <a href="#contact-form" class="btn btn-secondary btn-large" onclick="trackFunnelStep('decision', 'hero_contact_form', 'contact_page')">
+                        <i class="fas fa-envelope"></i> Send Message
+                    </a>
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <!-- Tracking Script -->
-    <script src="js/tracking.js"></script>
-    <script src="js/main.js"></script>
-    
-    <!-- Contact Page Specific Scripts -->
-    <script>
-    // Open Calendly Widget
-    function openCalendly() {
-        // Track booking attempt
-        trackFunnelStep('decision', 'calendly_open', 'contact_page');
-        
-        // Open Calendly widget
-        Calendly.initPopupWidget({
-            url: 'https://calendly.com/redwoodgrowth/strategy-session'
-        });
-        
-        return false;
-    }
-    
-    // Calendly event tracking
-    document.addEventListener('calendly.event_scheduled', function(e) {
-        trackFunnelStep('conversion', 'meeting_scheduled', 'calendly');
-        
-        // Track successful conversion
-        fbq('track', 'Schedule');
-        gtag('event', 'conversion', {
-            'send_to': 'AW-XXXXXXXXXX/XXXXXXXXXX',
-            'value': 1.0,
-            'currency': 'USD'
-        });
-    });
-    
-    // Add Contact Page Styles
-    document.addEventListener('DOMContentLoaded', function() {
-        // Track page view
-        trackFunnelStep('decision', 'page_view', 'contact');
-        
-        // Add styles
-        const style = document.createElement('style');
-        style.textContent = `
-            /* Contact Hero */
-            .contact-hero {
-                padding: 8rem 0 4rem;
-                background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-main) 100%);
-                color: var(--white);
-                text-align: center;
-            }
+    <!-- Contact Options -->
+    <section class="contact-options">
+        <div class="container">
+            <h2 class="section-title">Choose How You'd Like to Connect</h2>
+            <p class="section-subtitle">Select the option that works best for you</p>
             
-            .contact-hero .hero-title,
-            .contact-hero .hero-subtitle {
-                color: var(--white);
-            }
-            
-            .contact-hero .hero-cta {
-                display: flex;
-                justify-content: center;
-                gap: var(--space-lg);
-                flex-wrap: wrap;
-            }
-            
-            .contact-hero .btn-secondary {
-                background-color: transparent;
-                color: var(--white);
-                border-color: var(--white);
-            }
-            
-            .contact-hero .btn-secondary:hover {
-                background-color: var(--white);
-                color: var(--primary-main);
-            }
-            
-            /* Contact Options */
-            .contact-options {
-                padding: var(--space-3xl) 0;
-                background-color: var(--gray-50);
-            }
-            
-            .options-grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: var(--space-xl);
-                margin-top: var(--space-2xl);
-            }
-            
-            .option-card {
-                background-color: var(--white);
-                border-radius: var(--radius-lg);
-                padding: var(--space-2xl);
-                text-align: center;
-                box-shadow: var(--shadow-md);
-                transition: all var(--transition-normal);
-                border: 2px solid transparent;
-            }
-            
-            .option-card:hover {
-                transform: translateY(-8px);
-                box-shadow: var(--shadow-xl);
-                border-color: var(--primary-main);
-            }
-            
-            .option-icon {
-                font-size: 3rem;
-                color: var(--primary-main);
-                margin-bottom: var(--space-lg);
-            }
-            
-            .option-card h3 {
-                margin-bottom: var(--space-md);
-                color: var(--gray-900);
-            }
-            
-            .option-description {
-                color: var(--gray-700);
-                margin-bottom: var(--space-lg);
-            }
-            
-            .option-benefits {
-                list-style: none;
-                padding: 0;
-                margin: 0 0 var(--space-xl) 0;
-                text-align: left;
-            }
-            
-            .option-benefits li {
-                display: flex;
-                align-items: center;
-                gap: var(--space-sm);
-                margin-bottom: var(--space-sm);
-                color: var(--gray-700);
-                font-size: 0.875rem;
-            }
-            
-            .option-benefits li i {
-                color: var(--primary-main);
-            }
-            
-            /* Contact Form */
-            .contact-form-section {
-                padding: var(--space-3xl) 0;
-            }
-            
-            .form-container {
-                max-width: 800px;
-                margin: 0 auto;
-                background-color: var(--white);
-                border-radius: var(--radius-lg);
-                padding: var(--space-3xl);
-                box-shadow: var(--shadow-lg);
-            }
-            
-            .form-header {
-                text-align: center;
-                margin-bottom: var(--space-2xl);
-            }
-            
-            .contact-form {
-                display: flex;
-                flex-direction: column;
-                gap: var(--space-lg);
-            }
-            
-            .form-row {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: var(--space-lg);
-            }
-            
-            .form-group {
-                display: flex;
-                flex-direction: column;
-                gap: var(--space-xs);
-            }
-            
-            .form-group label {
-                font-weight: 600;
-                color: var(--gray-800);
-                font-size: 0.875rem;
-            }
-            
-            .form-group input,
-            .form-group select,
-            .form-group textarea {
-                padding: var(--space-md);
-                border: 2px solid var(--gray-200);
-                border-radius: var(--radius-md);
-                font-family: var(--font-primary);
-                font-size: 1rem;
-                transition: border-color var(--transition-fast);
-            }
-            
-            .form-group input:focus,
-            .form-group select:focus,
-            .form-group textarea:focus {
-                outline: none;
-                border-color: var(--primary-main);
-            }
-            
-            .checkbox-label {
-                display: flex;
-                align-items: flex-start;
-                gap: var(--space-sm);
-                cursor: pointer;
-            }
-            
-            .checkbox-label input[type="checkbox"] {
-                margin-top: 4px;
-            }
-            
-            .checkbox-label span {
-                font-weight: 400;
-                color: var(--gray-700);
-            }
-            
-            .checkbox-label a {
-                color: var(--primary-main);
-                text-decoration: none;
-            }
-            
-            .checkbox-label a:hover {
-                text-decoration: underline;
-            }
-            
-            /* Contact Info */
-            .contact-info {
-                padding: var(--space-3xl) 0;
-                background-color: var(--gray-50);
-            }
-            
-            .info-grid {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: var(--space-lg);
-            }
-            
-            .info-card {
-                background-color: var(--white);
-                border-radius: var(--radius-lg);
-                padding: var(--space-xl);
-                text-align: center;
-                box-shadow: var(--shadow-sm);
-                transition: all var(--transition-normal);
-            }
-            
-            .info-card:hover {
-                transform: translateY(-5px);
-                box-shadow: var(--shadow-md);
-            }
-            
-            .info-icon {
-                font-size: 2rem;
-                color: var(--primary-main);
-                margin-bottom: var(--space-md);
-            }
-            
-            .info-card h3 {
-                margin-bottom: var(--space-sm);
-                color: var(--gray-900);
-            }
-            
-            .info-card p {
-                color: var(--gray-700);
-                margin: 0;
-                font-size: 0.875rem;
-            }
-            
-            .info-card a {
-                color: var(--primary-main);
-                text-decoration: none;
-            }
-            
-            .info-card a:hover {
-                text-decoration: underline;
-            }
-            
-            /* Next Steps */
-            .next-steps {
-                padding: var(--space-3xl) 0;
-            }
-            
-            .steps-timeline {
-                max-width: 800px;
-                margin: var(--space-3xl) auto 0;
-                position: relative;
-            }
-            
-            .steps-timeline::before {
-                content: '';
-                position: absolute;
-                left: 24px;
-                top: 0;
-                bottom: 0;
-                width: 2px;
-                background-color: var(--primary-main);
-            }
-            
-            .step {
-                display: flex;
-                gap: var(--space-xl);
-                margin-bottom: var(--space-2xl);
-                position: relative;
-            }
-            
-            .step-number {
-                width: 50px;
-                height: 50px;
-                background-color: var(--primary-main);
-                color: var(--white);
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-weight: 700;
-                font-size: 1.25rem;
-                flex-shrink: 0;
-                z-index: 1;
-            }
-            
-            .step-content {
-                flex: 1;
-                padding-top: var(--space-sm);
-            }
-            
-            .step-content h3 {
-                margin-bottom: var(--space-sm);
-                color: var(--gray-900);
-            }
-            
-            .step-content p {
-                color: var(--gray-700);
-                margin: 0;
-            }
-            
-            /* Responsive */
-            @media (max-width: 991px) {
-                .options-grid {
-                    grid-template-columns: 1fr;
-                }
+            <div class="options-grid">
+                <div class="option-card" id="book-call">
+                    <div class="option-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Book a Strategy Session</h3>
+                    <p class="option-description">30-minute free consultation to discuss your goals and how we can help accelerate your growth.</p>
+                    <ul class="option-benefits">
+                        <li><i class="fas fa-check"></i> Free 30-minute consultation</li>
+                        <li><i class="fas fa-check"></i> No obligation commitment</li>
+                        <li><i class="fas fa-check"></i> Custom growth recommendations</li>
+                        <li><i class="fas fa-check"></i> Next steps roadmap</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="openCalendly()">
+                        <i class="fas fa-calendar-alt"></i> Book Now
+                    </button>
+                </div>
                 
-                .info-grid {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            }
-            
-            @media (max-width: 767px) {
-                .form-row {
-                    grid-template-columns: 1fr;
-                }
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Send Us a Message</h3>
+                    <p class="option-description">Have questions or want more information? Send us a message and we'll respond within 24 hours.</p>
+                    <ul class="option-benefits">
+                        <li><i class="fas fa-check"></i> 24-hour response time</li>
+                        <li><i class="fas fa-check"></i> Detailed information package</li>
+                        <li><i class="fas fa-check"></i> Custom pricing quote</li>
+                        <li><i class="fas fa-check"></i> Follow-up call scheduling</li>
+                    </ul>
+                    <a href="#contact-form" class="btn btn-outline" onclick="trackFunnelStep('decision', 'option_message', 'contact_page')">
+                        <i class="fas fa-arrow-down"></i> Go to Form
+                    </a>
+                </div>
                 
-                .info-grid {
-                    grid-template-columns: 1fr;
-                }
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Call Us Directly</h3>
+                    <p class="option-description">Prefer to talk? Give us a call during business hours for immediate assistance.</p>
+                    <ul class="option-benefits">
+                        <li><i class="fas fa-check"></i> Monday-Friday, 9am-5pm PST</li>
+                        <li><i class="fas fa-check"></i> Direct line to growth team</li>
+                        <li><i class="fas fa-check"></i> Immediate assistance</li>
+                        <li><i class="fas fa-check"></i> Quick answers to questions</li>
+                    </ul>
+                    <a href="tel:+15551234567" class="btn btn-outline" onclick="trackFunnelStep('decision', 'option_call', 'contact_page')">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section" id="contact-form">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2 class="section-title">Send Us a Message</h2>
+                    <p class="section-subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
+                </div>
                 
-                .contact-hero .hero-cta {
-                    flex-direction: column;
-                }
-                
-                .steps-timeline::before {
-                    left: 20px;
-                }
-                
-                .step-number {
-                    width: 40px;
-                    height: 40px;
-                    font-size: 1rem;
-                }
-            }
-        `;
-        
-        document.head.appendChild(style);
-        
-        // Form submission handling
-        const form = document.getElementById('main-contact-form');
-        if (form) {
-            form.addEventListener('submit', async function(event) {
-                event.preventDefault();
-                
-                const submitButton = this.querySelector('button[type="submit"]');
-                const originalText = submitButton.innerHTML;
-                
-                // Show loading state
-                submitButton.disabled = true;
-                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                
-                try {
-                    // Simulate form submission (replace with actual API call)
-                    await new Promise(resolve => setTimeout(resolve, 1500));
+                <form class="contact-form" id="main-contact-form" data-form-id="main_contact">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required 
+                                   onfocus="trackFormInteraction('main_contact', 'name', 'field_focus')"
+                                   oninput="trackFormInteraction('main_contact', 'name', 'field_input')">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required 
+                                   onfocus="trackFormInteraction('main_contact', 'email', 'field_focus')"
+                                   oninput="trackFormInteraction('main_contact', 'email', 'field_input')">
+                        </div>
+                    </div>
                     
-                    // Show success message
-                    showFormMessage(this, 'success', 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.');
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company"
+                                   onfocus="trackFormInteraction('main_contact', 'company', 'field_focus')"
+                                   oninput="trackFormInteraction('main_contact', 'company', 'field_input')">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                   onfocus="trackFormInteraction('main_contact', 'phone', 'field_focus')"
+                                   oninput="trackFormInteraction('main_contact', 'phone', 'field_input')">
+                        </div>
+                    </div>
                     
-                    // Track successful submission
-                    trackFunnelStep('conversion', 'contact_form_submit', 'main_contact');
+                    <div class="form-group">
+                        <label for="service">Primary Interest *</label>
+                        <select id="service" name="service" required
+                                onfocus="trackFormInteraction('main_contact', 'service', 'field_focus')"
+                                onchange="trackFormInteraction('main_contact', 'service', 'field_change')">
+                            <option value="">Select a service</option>
+                            <option value="sapling">Sapling Starter (Free Audit)</option>
+                            <option value="catalyst">Growth Catalyst ($1,500-3,000/month)</option>
+                            <option value="elite">Accelerator Elite ($3,000-7,000/month)</option>
+                            <option value="enterprise">Enterprise Grove (Custom)</option>
+                            <option value="other">Other/Not Sure</option>
+                        </select>
+                    </div>
                     
-                    // Reset form
-                    this.reset();
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" rows="5" required
+                                  onfocus="trackFormInteraction('main_contact', 'message', 'field_focus')"
+                                  oninput="trackFormInteraction('main_contact', 'message', 'field_input')"
+                                  placeholder="Tell us about your business, current marketing efforts, and growth goals..."></textarea>
+                    </div>
                     
-                } catch (error) {
-                    showFormMessage(this, 'error', 'Sorry, there was an error sending your message. Please try again or call us directly.');
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter" checked>
+                            <span>Subscribe to our newsletter for free resources and growth tips</span>
+                        </label>
+                    </div>
                     
-                    // Track failed submission
-                    trackFunnelStep('decision', 'contact_form_error', 'main_contact');
-                } finally {
-                    // Restore button state
-                    submitButton.disabled = false;
-                    submitButton.innerHTML = originalText;
-                }
-            });
-        }
-    });
-    </script>
-</body>
-</html>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="privacy" required>
+                            <span>I agree to the <a href="#" onclick="trackFunnelStep('decision', 'privacy_policy', 'contact_page')">Privacy Policy</a> and consent to being contacted</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Location</h3>
+                    <p>San Francisco Bay Area<br>Remote Team Worldwide</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday<br>9:00 AM - 5:00 PM PST</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+15551234567">+1 (555) 123-4567</a><br>Available during business hours</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:hello@redwoodgrowth.com">hello@redwoodgrowth.com</a><br>Response within 24 hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="next-steps">
+        <div class="container">
+            <h2 class="section-title">What Happens Next?</h2>
+            
+            <div class="steps-timeline">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Initial Contact</h3>
+                        <p>You book a call or send us a message. We'll confirm receipt and schedule our strategy session.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Strategy Session</h3>
+                        <p>30-minute free consultation to understand your business, goals, and current marketing efforts.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Custom Proposal</h3>
+                        <p>We create a tailored growth acceleration plan with specific recommendations and pricing.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Onboarding & Launch</h3>
+                        <p>Once approved, we begin implementation with a detailed onboarding and launch timeline.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Start Your Growth Journey?</h2>
+                <p class="cta-subtitle">Book your free strategy session today and discover how we can accelerate your digital marketing growth.</p>
+                <button class="btn btn-primary btn-large" onclick="openCalendly()">
+                    <i class="fas fa-calendar-check"></i> Book Free Session Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-icon">🌲</span>
+                        <span class="logo-text">Redwood Growth Accelerator</span>
+                    </a>
+                    <p class="footer-description">Accelerating digital marketing growth through data-driven strategies and automated systems.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Services</h3>
+                    <a href="services.html#starter" class="footer-link">Sapling Starter</a>
+                    <a href="services.html#catalyst" class="footer-link">Growth Catalyst</a>
+                    <a href="services.html#elite" class="footer-link">Accelerator Elite</a>
+                    <a href="services.html#enterprise" class="footer-link">Enterprise Grove</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Resources</h3>
+                    <a href="resources.html" class="footer-link">Free Templates</a>
+                    <a href="resources.html" class="footer-link">Case Studies</a>
+                    <a href="resources.html" class="footer-link">Blog</a>
+                    <a href="resources.html" class="footer-link">Tools</a>
+                </
